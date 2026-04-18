@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HelpHubm-AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+ <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" /><link rel="stylesheet" href="style.css">
+<script src="app.js" deffer></script>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <div class="navbar__brand" onclick="navigateTo('home')">
+      <div class="navbar__logo">H</div>HelpHub AI
+    </div>
+    <div class="navbar__links" id="nav-links">
+      <span class="navbar__link active" data-page="home">Home</span>
+      <span class="navbar__link" data-page="explore">Explore</span>
+      <span class="navbar__link" data-page="leaderboard">Leaderboard</span>
+      <span class="navbar__link" data-page="ai-center">AI Center</span>
+    </div>
+    <div class="navbar__actions" id="nav-actions">
+      <span class="navbar__signal">Live community signals</span>
+      <button class="btn btn--primary" onclick="navigateTo('login')">Join the platform</button>
+    </div>
+    <button class="navbar__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <span class="mobile-nav__link" data-page="home">Home</span>
+  <span class="mobile-nav__link" data-page="explore">Explore</span>
+  <span class="mobile-nav__link" data-page="leaderboard">Leaderboard</span>
+  <span class="mobile-nav__link" data-page="ai-center">AI Center</span>
+  <span class="mobile-nav__link" data-page="messages">Messages</span>
+  <span class="mobile-nav__link" data-page="notifications">Notifications</span>
+  <span class="mobile-nav__link" data-page="profile">Profile</span>
+  <span class="mobile-nav__link" data-page="create">Post a Request</span>
+  <span class="mobile-nav__link" data-page="login">Login / Signup</span>
+</div>
+
+<!-- ═══ PAGE: HOME ═══ -->
+<div class="page page-bg active" id="page-home">
+  <div class="container home-hero">
+    <div class="home-hero__grid">
+      <div class="home-hero__left">
+        <div>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:12px">SMIT GRAND CODING NIGHT 2026</p>
+          <h1 class="home-hero__title">Find help faster.<br>Become help that matters.</h1>
+          <p class="home-hero__desc">HelpHub AI is a community-powered support network for students, mentors, creators, and builders. Ask for help, offer help, track impact, and let AI surface smarter matches across the platform.</p>
+        </div>
+        <div class="home-hero__cta">
+          <button class="btn btn--dark btn--lg" onclick="navigateTo('login')">Open product demo</button>
+          <button class="btn btn--outline btn--lg" onclick="navigateTo('create')">Post a request</button>
+        </div>
+        <div class="home-hero__stats">
+          <div class="home-stat"><div class="home-stat__label">Members</div><div class="home-stat__value">384+</div><div class="home-stat__desc">Students, mentors, and helpers in the loop.</div></div>
+          <div class="home-stat"><div class="home-stat__label">Requests</div><div class="home-stat__value">72+</div><div class="home-stat__desc">Support posts shared across learning journeys.</div></div>
+          <div class="home-stat"><div class="home-stat__label">Solved</div><div class="home-stat__value">69+</div><div class="home-stat__desc">Problems resolved through fast community action.</div></div>
+        </div>
+      </div>
+      <div class="home-hero__right">
+        <div class="home-hero__right-dot"></div>
+        <p class="home-hero__right-label">LIVE PRODUCT FEEL</p>
+        <h2 class="home-hero__right-title">More than a form.<br>More like an ecosystem.</h2>
+        <p class="home-hero__right-desc">A polished multi-page experience inspired by product platforms, with AI summaries, trust scores, contribution signals, notifications, and leaderboard momentum built directly in HTML, CSS, JavaScript, and LocalStorage.</p>
+        <div class="home-feature-item"><div class="home-feature-item__title">AI request intelligence</div><div class="home-feature-item__desc">Auto-categorization, urgency detection, tags, rewrite suggestions, and trend snapshots.</div></div>
+        <div class="home-feature-item"><div class="home-feature-item__title">Community trust graph</div><div class="home-feature-item__desc">Badges, helper rankings, trust score boosts, and visible contribution history.</div></div>
+        <div class="home-feature-item"><div class="home-pct">100%</div><div class="home-feature-item__desc">Top trust score currently active across the sample mentor network.</div></div>
+      </div>
+    </div>
+    <section class="home-flow">
+      <div class="home-flow__header">
+        <div><p class="home-flow__label">CORE FLOW</p><h2 class="home-flow__title">From struggling alone to solving together</h2></div>
+        <button class="btn btn--outline" onclick="navigateTo('login')">Try onboarding AI</button>
+      </div>
+      <div class="home-flow__grid">
+        <div class="flow-card"><div class="flow-card__title">Ask for help clearly</div><div class="flow-card__desc">Create structured requests with category, urgency, AI suggestions, and tags that attract the right people.</div></div>
+        <div class="flow-card"><div class="flow-card__title">Discover the right people</div><div class="flow-card__desc">Use the explore feed, helper lists, notifications, and messaging to move quickly once a match happens.</div></div>
+        <div class="flow-card"><div class="flow-card__title">Track real contribution</div><div class="flow-card__desc">Trust scores, badges, solved requests, and rankings help the community recognize meaningful support.</div></div>
+      </div>
+    </section>
+    <section class="home-featured">
+      <div class="home-featured__header">
+        <div><p class="home-featured__label">FEATURED REQUESTS</p><h2 class="home-featured__title">Community problems currently in motion</h2></div>
+        <button class="btn btn--outline" onclick="navigateTo('explore')">View full feed</button>
+      </div>
+      <div class="grid-3" id="home-featured-grid"></div>
+    </section>
+  </div>
+  <footer class="home-footer">HelpHub AI is built as a premium-feel, multi-page community support product using HTML, CSS, JavaScript, and LocalStorage.</footer>
+</div>
+
+<!-- ═══ PAGE: LOGIN ═══ -->
+<div class="page page-bg" id="page-login">
+  <div class="login-content">
+    <div class="login-grid">
+      <div class="login-left">
+        <p class="login-left__label">COMMUNITY ACCESS</p>
+        <h2 class="login-left__title">Enter the support network.</h2>
+        <p class="login-left__desc">Choose a demo identity, set your role, and jump into a multi-page product flow designed for asking, offering, and tracking help with a premium interface.</p>
+        <div class="login-left__features">
+          <div class="login-left__feature">Role-based entry for Need Help, Can Help, or Both</div>
+          <div class="login-left__feature">Direct path into dashboard, requests, AI Center, and community feed</div>
+          <div class="login-left__feature">Persistent demo session powered by LocalStorage</div>
+        </div>
+      </div>
+      <div class="login-right">
+        <p class="login-right__label">LOGIN / SIGNUP</p>
+        <h2 class="login-right__title">Authenticate your community profile</h2>
+        <div class="login-form">
+          <div class="form-group"><label class="form-label">Select demo user</label>
+            <select class="form-select" id="login-user"><option value="Ayesha Khan">Ayesha Khan</option><option value="Hassan Ali">Hassan Ali</option><option value="Sara Noor">Sara Noor</option></select></div>
+          <div class="form-group"><label class="form-label">Role selection</label>
+            <select class="form-select"><option value="both">Both</option><option value="need-help">Need Help</option><option value="can-help">Can Help</option></select></div>
+          <div class="login-row">
+            <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" value="community@helphub.ai"/></div>
+            <div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" value="12345678"/></div>
+          </div>
+          <button class="btn btn--primary btn--full btn--lg" id="login-btn">Continue to dashboard</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: DASHBOARD ═══ -->
+<div class="page page-bg" id="page-dashboard">
+  <div class="container dashboard-page">
+    <div class="dashboard-hero">
+      <p class="dashboard-hero__label">DASHBOARD</p>
+      <h1 class="dashboard-hero__title">Your community impact at a glance.</h1>
+      <p class="dashboard-hero__subtitle">Track your requests, helper activity, trust score, and contribution signals from one place.</p>
+    </div>
+    <div class="dashboard-grid">
+      <div class="dashboard-stats">
+        <div class="dashboard-stat"><div class="dashboard-stat__label">TRUST SCORE</div><div class="dashboard-stat__value">100%</div><div class="dashboard-stat__desc">Top trust score active across the mentor network.</div></div>
+        <div class="dashboard-stat"><div class="dashboard-stat__label">CONTRIBUTIONS</div><div class="dashboard-stat__value">35</div><div class="dashboard-stat__desc">Helps offered, solved, and tracked.</div></div>
+        <div class="dashboard-stat"><div class="dashboard-stat__label">REQUESTS</div><div class="dashboard-stat__value">4</div><div class="dashboard-stat__desc">Active and resolved posts in the community.</div></div>
+        <div class="dashboard-stat"><div class="dashboard-stat__label">BADGES</div><div class="dashboard-stat__value">3</div><div class="dashboard-stat__desc">Design Ally · Fast Responder · Top Mentor</div></div>
+      </div>
+      <div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="card__label">QUICK ACTIONS</div>
+          <h3 class="card__title" style="font-size:20px;margin-bottom:16px">What would you like to do?</h3>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <button class="btn btn--primary btn--full" onclick="navigateTo('create')">Post a new request</button>
+            <button class="btn btn--outline btn--full" onclick="navigateTo('explore')">Browse community feed</button>
+            <button class="btn btn--outline btn--full" onclick="navigateTo('messages')">View messages</button>
+            <button class="btn btn--outline btn--full" onclick="navigateTo('profile')">Edit profile</button>
+          </div>
+        </div>
+        <div class="card"><div class="card__label">YOUR SKILLS</div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px"><span class="tag tag--web">Figma</span><span class="tag tag--web">UI/UX</span><span class="tag tag--web">HTML/CSS</span><span class="tag tag--career">Career Guidance</span></div></div>
+      </div>
+    </div>
+    <h2 class="dashboard-requests__title">Recent community requests</h2>
+    <div class="grid-3" id="dashboard-req-grid"></div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: EXPLORE ═══ -->
+<div class="page page-bg" id="page-explore">
+  <div class="container explore-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">EXPLORE / FEED</p>
+      <h1 class="hero-card__title">Browse help requests with filterable community context.</h1>
+      <p class="hero-card__subtitle">Filter by category, urgency, skills, and location to surface the best matches.</p>
+    </div>
+    <div class="explore-grid">
+      <aside class="explore-filters">
+        <h2 class="explore-filters__title">Refine the feed</h2>
+        <div class="filter-group"><div class="filter-group__label">Category</div>
+          <select class="form-select" id="filter-category"><option value="">All categories</option><option value="Web Development">Web Development</option><option value="Design">Design</option><option value="Career">Career</option></select></div>
+        <div class="filter-group"><div class="filter-group__label">Urgency</div>
+          <select class="form-select" id="filter-urgency"><option value="">All urgency levels</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select></div>
+        <div class="filter-group"><div class="filter-group__label">Skills</div><input class="form-input" id="filter-skills" placeholder="React, Figma, Git/GitHub"/></div>
+        <div class="filter-group"><div class="filter-group__label">Location</div><input class="form-input" id="filter-location" placeholder="Karachi, Lahore, Remote"/></div>
+      </aside>
+      <div class="explore-feed" id="explore-feed"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: AI CENTER ═══ -->
+<div class="page page-bg" id="page-ai-center">
+  <div class="container ai-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">AI CENTER</p>
+      <h1 class="hero-card__title">See what the platform intelligence is noticing.</h1>
+      <p class="hero-card__subtitle">AI-like insights summarize demand trends, helper readiness, urgency signals, and request recommendations.</p>
+    </div>
+    <div class="ai-stats-grid">
+      <div class="ai-stat"><div class="ai-stat__label">TREND PULSE</div><div class="ai-stat__value" style="font-size:26px;line-height:1.2">Web Development</div><div class="ai-stat__desc">Most common support area based on active community requests.</div></div>
+      <div class="ai-stat"><div class="ai-stat__label">URGENCY WATCH</div><div class="ai-stat__value">2</div><div class="ai-stat__desc">Requests currently flagged high priority by the urgency detector.</div></div>
+      <div class="ai-stat"><div class="ai-stat__label">MENTOR POOL</div><div class="ai-stat__value">2</div><div class="ai-stat__desc">Trusted helpers with strong response history and contribution signals.</div></div>
+    </div>
+    <div class="ai-recommendations">
+      <p class="ai-recommendations__label">AI RECOMMENDATIONS</p>
+      <h2 class="ai-recommendations__title">Requests needing attention</h2>
+      <div id="ai-rec-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: MESSAGES ═══ -->
+<div class="page page-bg" id="page-messages">
+  <div class="container messages-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">INTERACTION / MESSAGING</p>
+      <h1 class="hero-card__title">Keep support moving through direct communication.</h1>
+      <p class="hero-card__subtitle">Basic messaging gives helpers and requesters a clear follow-up path once a match happens.</p>
+    </div>
+    <div class="messages-grid">
+      <div class="messages-stream">
+        <p class="messages-stream__label">CONVERSATION STREAM</p>
+        <h2 class="messages-stream__title">Recent messages</h2>
+        <div id="message-stream"></div>
+      </div>
+      <div class="messages-compose">
+        <div><p class="messages-compose__label">SEND MESSAGE</p><h2 class="messages-compose__title">Start a conversation</h2></div>
+        <div class="form-group"><label class="form-label">To</label>
+          <select class="form-select" id="msg-to"><option value="Ayesha Khan">Ayesha Khan</option><option value="Hassan Ali">Hassan Ali</option><option value="Sara Noor">Sara Noor</option></select></div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" id="msg-input" placeholder="Share support details, ask for files, or suggest next steps." style="min-height:150px"></textarea></div>
+        <button class="btn btn--primary btn--full btn--lg" id="send-msg-btn">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: PROFILE ═══ -->
+<div class="page page-bg" id="page-profile">
+  <div class="container profile-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">PROFILE</p>
+      <h1 class="hero-card__title">Ayesha Khan</h1>
+      <p style="font-size:15px;color:rgba(255,255,255,.6);margin-top:8px">Both • Karachi</p>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-public">
+        <p class="profile-public__label">PUBLIC PROFILE</p>
+        <h2 class="profile-public__title">Skills and reputation</h2>
+        <div class="profile-stat-row"><span>Trust score</span><span class="profile-stat-row__value">100%</span></div>
+        <div class="profile-stat-row"><span>Contributions</span><span class="profile-stat-row__value">35</span></div>
+        <div class="profile-skill-group"><div class="profile-skill-group__label">Skills</div><div class="profile-skills"><span class="tag tag--web">Figma</span><span class="tag tag--web">UI/UX</span><span class="tag tag--web">HTML/CSS</span><span class="tag tag--career">Career Guidance</span></div></div>
+        <div class="profile-skill-group" style="border-bottom:none"><div class="profile-skill-group__label">Badges</div><div class="profile-skills"><span class="tag tag--generic">Design Ally</span><span class="tag tag--generic">Fast Responder</span><span class="tag tag--generic">Top Mentor</span></div></div>
+      </div>
+      <div class="profile-edit">
+        <p class="profile-edit__label">EDIT PROFILE</p>
+        <h2 class="profile-edit__title">Update your identity</h2>
+        <div class="profile-edit-form">
+          <div class="profile-row">
+            <div class="form-group"><label class="form-label">Name</label><input class="form-input" type="text" value="Ayesha Khan"/></div>
+            <div class="form-group"><label class="form-label">Location</label><input class="form-input" type="text" value="Karachi"/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Skills</label><input class="form-input" type="text" value="Figma, UI/UX, HTML/CSS, Career Guidance"/></div>
+          <div class="form-group"><label class="form-label">Interests</label><input class="form-input" type="text" value="Hackathons, UI/UX, Community Building"/></div>
+          <button class="btn btn--primary btn--full btn--lg" onclick="showToast('Profile saved successfully!')">Save profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: LEADERBOARD ═══ -->
+<div class="page page-bg" id="page-leaderboard">
+  <div class="container leaderboard-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">LEADERBOARD</p>
+      <h1 class="hero-card__title">Recognize the people who keep the community moving.</h1>
+      <p class="hero-card__subtitle">Trust score, contribution count, and badges create visible momentum for reliable helpers.</p>
+    </div>
+    <div class="leaderboard-grid">
+      <div class="leaderboard-rankings">
+        <p class="leaderboard-rankings__label">TOP HELPERS</p>
+        <h2 class="leaderboard-rankings__title">Rankings</h2>
+        <div id="rank-list"></div>
+      </div>
+      <div class="leaderboard-badges">
+        <p class="leaderboard-badges__label">BADGE SYSTEM</p>
+        <h2 class="leaderboard-badges__title">Trust and achievement</h2>
+        <div id="badge-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: NOTIFICATIONS ═══ -->
+<div class="page page-bg" id="page-notifications">
+  <div class="container notifications-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">NOTIFICATIONS</p>
+      <h1 class="hero-card__title">Stay updated on requests, helpers, and trust signals.</h1>
+    </div>
+    <div class="notifications-feed">
+      <p class="notifications-feed__label">LIVE UPDATES</p>
+      <h2 class="notifications-feed__title">Notification feed</h2>
+      <div id="notif-feed"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: CREATE REQUEST ═══ -->
+<div class="page page-bg" id="page-create">
+  <div class="container create-page">
+    <div class="hero-card" style="margin-bottom:28px">
+      <p class="hero-card__label">CREATE REQUEST</p>
+      <h1 class="hero-card__title">Turn a rough problem into a clear help request.</h1>
+      <p class="hero-card__subtitle">Use built-in AI suggestions for category, urgency, tags, and a stronger description rewrite.</p>
+    </div>
+    <div class="create-grid">
+      <div class="create-form-card">
+        <div class="form-group"><label class="form-label">Title</label><input class="form-input" type="text" id="cr-title" placeholder="Need review on my JavaScript quiz app before submission"/></div>
+        <div class="form-group"><label class="form-label">Description</label><textarea class="form-textarea" id="cr-desc" placeholder="Explain the challenge, your current progress, deadline, and what kind of help would be useful." style="min-height:140px"></textarea></div>
+        <div class="create-form-row">
+          <div class="form-group"><label class="form-label">Tags</label><input class="form-input" type="text" id="cr-tags" placeholder="JavaScript, Debugging, Review"/></div>
+          <div class="form-group"><label class="form-label">Category</label>
+            <select class="form-select" id="cr-category"><option value="Web Development">Web Development</option><option value="Design">Design</option><option value="Career">Career</option><option value="General">General</option></select></div>
+        </div>
+        <div class="form-group"><label class="form-label">Urgency</label>
+          <select class="form-select" id="cr-urgency"><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select></div>
+        <div class="create-form-actions">
+          <button class="btn btn--outline" id="cr-ai-btn">Apply AI suggestions</button>
+          <button class="btn btn--primary" id="cr-publish-btn">Publish request</button>
+        </div>
+      </div>
+      <div class="ai-assistant-card">
+        <p class="ai-assistant-card__label">AI ASSISTANT</p>
+        <h2 class="ai-assistant-card__title">Smart request guidance</h2>
+        <div class="ai-hint-row"><span class="ai-hint-row__label">Suggested category</span><span class="ai-hint-row__value" id="hint-category">Community</span></div>
+        <div class="ai-hint-row"><span class="ai-hint-row__label">Detected urgency</span><span class="ai-hint-row__value" id="hint-urgency">Low</span></div>
+        <div class="ai-hint-row"><span class="ai-hint-row__label">Suggested tags</span><span class="ai-hint-row__value hint">Add more detail for smarter tags</span></div>
+        <div class="ai-hint-row"><span class="ai-hint-row__label">Rewrite suggestion</span><span class="ai-hint-row__value hint">Start describing the challenge to generate a stronger version.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PAGE: DETAIL ═══ -->
+<div class="page page-bg" id="page-detail">
+  <div class="container detail-page">
+    <div class="hero-card" id="detail-hero" style="margin-bottom:28px">
+      <div id="detail-hero-tags" style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap"></div>
+      <h1 class="hero-card__title" id="detail-hero-title" style="font-size:clamp(28px,4vw,46px)"></h1>
+      <p class="hero-card__subtitle" id="detail-hero-desc" style="margin-top:12px"></p>
+    </div>
+    <div class="detail-grid">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="detail-card">
+          <p class="detail-card__label">AI SUMMARY</p>
+          <div class="detail-brand"><div class="detail-brand__logo">H</div><span class="detail-brand__name">HelpHub AI</span></div>
+          <div class="detail-ai-text" id="detail-ai"></div>
+        </div>
+        <div class="detail-card">
+          <p class="detail-card__label">ACTIONS</p>
+          <div class="detail-actions">
+            <button class="btn btn--primary btn--lg" id="detail-can-help">I can help</button>
+            <button class="btn btn--outline btn--lg" id="detail-solved">Mark as solved</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="detail-card">
+          <p class="detail-card__label">REQUESTER</p>
+          <div style="display:flex;align-items:center;gap:14px;padding:12px 0">
+            <div class="avatar avatar--orange">SN</div>
+            <div><div style="font-weight:700">Sara Noor</div><div style="font-size:13px;color:var(--color-text-muted)">Remote • Career seeker</div></div>
+          </div>
+        </div>
+        <div class="detail-card">
+          <p class="detail-card__label">HELPERS</p>
+          <h3 style="font-family:var(--font-display);font-size:20px;font-weight:700;margin-bottom:14px">People ready to support</h3>
+          <div class="detail-helpers" id="detail-helpers"></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:24px"><button class="btn btn--outline" onclick="navigateTo('explore')">← Back to explore</button></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+
+</body>
+</html>
